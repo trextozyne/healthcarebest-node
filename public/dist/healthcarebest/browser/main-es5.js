@@ -3443,7 +3443,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.router = router;
         this.navServices = navServices;
-        this.navServices.items.subscribe(function (menuItems) {
+        this.navServices.getMenu.subscribe(function (menuItems) {
           return _this4.menuItems = menuItems;
         });
         console.log('The menu list is: ', this.menuItems);

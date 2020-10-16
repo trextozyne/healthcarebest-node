@@ -759,7 +759,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.sliderProduct = [];
         this.productCollections = [];
         this.productCategories = [];
-        this.productTypes = [];
         this.foundProductsByCategory = [];
         this.searchedProducts = [];
         this.types = [];
@@ -844,31 +843,32 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this.productCategories.push(item.category);
             }
           }); // console.log(this.productCategories);
+          // Get the Product Categories and category types for app-collection
 
-        }); // Get the Product Categories and category types for app-collection
 
-        this.productCategories.filter(function (item, i) {
-          var text = '';
-          var image = _this.sliderProduct[i].image;
-          var title = _this.sliderProduct[i].category;
+          _this.productCategories.filter(function (item, i) {
+            var text = '';
+            var image = _this.sliderProduct[i].image;
+            var title = _this.sliderProduct[i].category;
 
-          var types = _toConsumableArray(new Set(_this.products.filter(function (product) {
-            return product.category === item;
-          }).map(function (product) {
-            return product.type;
-          })));
+            var types = _toConsumableArray(new Set(_this.products.filter(function (product) {
+              return product.category === item;
+            }).map(function (product) {
+              return product.type;
+            })));
 
-          types.forEach(function (type) {
-            text += "<li><a href=\"/shop/collection/products?category=".concat(title, "&type=").concat(type, "\">").concat(type, "</a></li>");
+            types.forEach(function (type) {
+              text += "<li><a href=\"/shop/collection/products?category=".concat(title, "&type=").concat(type, "\">").concat(type, "</a></li>");
+            });
+
+            _this.sliderProducts.push({
+              image: image,
+              title: title,
+              text: _this.sanitizer.bypassSecurityTrustHtml(text)
+            });
+
+            _this.sliderProducts = _toConsumableArray(new Set(_this.sliderProducts));
           });
-
-          _this.sliderProducts.push({
-            image: image,
-            title: title,
-            text: _this.sanitizer.bypassSecurityTrustHtml(text)
-          });
-
-          _this.sliderProducts = _toConsumableArray(new Set(_this.sliderProducts));
         });
       }
 

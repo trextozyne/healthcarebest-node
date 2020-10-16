@@ -40,20 +40,6 @@ mongoose.connect(mongoDB, (err, db) => {
     database = db;
 });
 
-app.get('/api/menu', (req, res, next) => {
-    const collection = database.collection('menu');
-    collection.find().toArray(function (err, menus) {
-        res.status(200).json(menus);
-    });
-});
-
-app.get('/api/leftmenu', (req, res, next) => {
-    const collection = database.collection('leftmenu');
-    collection.find().toArray(function (err, menus) {
-        res.status(200).json(menus);
-    });
-});
-
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);
@@ -82,6 +68,20 @@ app.use(session({secret: 'S@lv@t10n_G0d', resave: false, saveUninitialized: true
         { maxAge: Date.now() + (30 * 86400 * 1000) }
 })); // shouldnt be storing secret in a public repository, should be in an environment variable
 
+
+app.get('/api/menu', async(req, res, next) => {
+    const collection = database.collection('menu');
+    collection.find().toArray(function (err, menus) {
+        res.status(200).json(menus);
+    });
+});
+
+app.get('/api/leftmenu', async(req, res, next) => {
+    const collection = database.collection('leftmenu');
+    collection.find().toArray(function (err, menus) {
+        res.status(200).json(menus);
+    });
+});
 app.use('/api/products', product);
 app.use('/api/categories', categories);
 app.use('/api/orders', orders);
@@ -92,8 +92,13 @@ app.get('/', (req, res) => {
     // res.send('App Works !!!!');
 });
 
+app.get('/home/tools', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/dist/healthcarebest/browser/index.html'))
+    // res.send('App Works !!!!');
+});
+
 // Basic error logger/handler
-app.use(function (err, req, res, next) {
+app.use(async function (err, req, res, next) {
     res.status(500).send(err.message || 'Something broke!');
     next(err || new Error('Something broke!'));
 });

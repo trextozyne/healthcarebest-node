@@ -369,7 +369,6 @@ class ToolsComponent {
         this.sliderProduct = [];
         this.productCollections = [];
         this.productCategories = [];
-        this.productTypes = [];
         this.foundProductsByCategory = [];
         this.searchedProducts = [];
         this.types = [];
@@ -444,18 +443,18 @@ class ToolsComponent {
                     this.productCategories.push(item.category);
                 }
             }); // console.log(this.productCategories);
-        });
-        // Get the Product Categories and category types for app-collection
-        this.productCategories.filter((item, i) => {
-            let text = '';
-            const image = this.sliderProduct[i].image;
-            const title = this.sliderProduct[i].category;
-            const types = [...new Set(this.products.filter(product => product.category === item).map(product => product.type))];
-            types.forEach((type) => {
-                text += `<li><a href="/shop/collection/products?category=${title}&type=${type}">${type}</a></li>`;
+            // Get the Product Categories and category types for app-collection
+            this.productCategories.filter((item, i) => {
+                let text = '';
+                const image = this.sliderProduct[i].image;
+                const title = this.sliderProduct[i].category;
+                const types = [...new Set(this.products.filter(product => product.category === item).map(product => product.type))];
+                types.forEach((type) => {
+                    text += `<li><a href="/shop/collection/products?category=${title}&type=${type}">${type}</a></li>`;
+                });
+                this.sliderProducts.push({ image, title, text: this.sanitizer.bypassSecurityTrustHtml(text) });
+                this.sliderProducts = [...new Set(this.sliderProducts)];
             });
-            this.sliderProducts.push({ image, title, text: this.sanitizer.bypassSecurityTrustHtml(text) });
-            this.sliderProducts = [...new Set(this.sliderProducts)];
         });
     }
     ngOnInit() {

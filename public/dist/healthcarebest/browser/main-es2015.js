@@ -1680,7 +1680,7 @@ class MenuComponent {
     constructor(router, navServices) {
         this.router = router;
         this.navServices = navServices;
-        this.navServices.items.subscribe(menuItems => this.menuItems = menuItems);
+        this.navServices.getMenu.subscribe(menuItems => this.menuItems = menuItems);
         console.log('The menu list is: ', this.menuItems);
         this.router.events.subscribe((event) => {
             this.navServices.mainMenuToggle = false;
