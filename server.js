@@ -3,7 +3,7 @@
 var errorHandler;
 
 if (process.env.NODE_ENV === 'production') {
-    require('@google-cloud/trace-trace').start();
+    require('@google-cloud/trace-agent').start();
     const {ErrorReporting} = require('@google-cloud/cloud-errors');
     errorHandler = new ErrorReporting();
 }
