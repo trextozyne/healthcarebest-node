@@ -1,10 +1,10 @@
 'use strict';
 
-var errorHandler;
+let errorHandler;
 
 if (process.env.NODE_ENV === 'production') {
     require('@google-cloud/trace-agent').start();
-    const {ErrorReporting} = require('@google-cloud/cloud-errors');
+    const {ErrorReporting} = require('@google-cloud/error-reporting');
     errorHandler = new ErrorReporting();
 }
 
