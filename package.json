@@ -10,10 +10,10 @@
   },
   "author": "trex",
   "license": "ISC",
-"repository": {
-  "type": "git",
-  "url": "https://github.com/trextozyne/healthbestcare-node.git"
-},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trextozyne/healthbestcare-node.git"
+  },
   "dependencies": {
     "@google-cloud/debug-agent": "^5.1.2",
     "@google-cloud/error-reporting": "^2.0.0",
@@ -21,7 +21,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-session": "^1.17.1"
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.5"
