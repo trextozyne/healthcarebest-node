@@ -1,0 +1,61 @@
+{
+  "customers": [
+    {
+      "customerId": 1,
+      "customerFirstName": "Oluwatosin",
+      "customerLastName": "Akinnifesi",
+      "title": "Mr",
+      "imageurl": "../../../assets/images/customers/20190611_190210.jpg",
+      "username": "daleks",
+      "email": "daleks1987@gmail.com",
+      "password": "Pasword123",
+      "gender": "male",
+      "profile": null,
+      "phone": 17739979341,
+      "address1": "1208 South Madison Street",
+      "address2": "",
+      "city": "Chicago",
+      "state": "Illinois",
+      "zipCode": 60644,
+      "country": "USA"
+    },
+    {
+      "customerId": 2,
+      "customerFirstName": "Kelechi",
+      "customerLastName": "Ugoh",
+      "title": "Mr",
+      "imageurl": "../../../assets/images/customers/20190611_190210.jpg",
+      "username": "kels",
+      "email": "kelUgohchi@gmail.com",
+      "password": "Pasword123",
+      "gender": "male",
+      "profile": null,
+      "phone": 17739979341,
+      "address1": "1208 South Madison Street",
+      "address2": null,
+      "city": "Bethlehem",
+      "state": "Pennsylvania",
+      "zipCode": 60644,
+      "country": "UK"
+    },
+    {
+      "customerId": 3,
+      "customerFirstName": "admin",
+      "customerLastName": "admin",
+      "title": "Mr",
+      "imageurl": "../../../assets/images/customers/20190611_190210.jpg",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "Pasword123",
+      "gender": "male",
+      "profile": null,
+      "phone": 17739979341,
+      "address1": "1208 South Madison Street",
+      "address2": null,
+      "city": "Bethlehem",
+      "state": "Pennsylvania",
+      "zipCode": 60644,
+      "country": "UK"
+    }
+  ]
+}

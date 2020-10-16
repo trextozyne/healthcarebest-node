@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Women",
+      "description": "This consist of all women related accessories.",
+      "src": "assets/images/categories/women.jpg"
+    },
+    {
+      "id": 2,
+      "name": "footwears",
+      "description": "This consist of all foot wear related accessories.",
+      "src": "assets/images/categories/footwear.jpg"
+    },
+    {
+      "id": 3,
+      "name": "clothing",
+      "description": "This consist of all clothes that worn in all varieties.",
+      "src": "assets/images/categories/clothing.jpg"
+    },
+    {
+      "id": 4,
+      "name": "accessories",
+      "description": "This consist of all clothing or fashion related accessories.",
+      "src": "assets/images/categories/accessory1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "flower & gifts",
+      "description": "This consist of all natures botanical beauty's and gifts.",
+      "src": "assets/images/categories/flower-gifts.jpg"
+    },
+    {
+      "id": 6,
+      "name": "pet toys",
+      "description": "This consist of toys and accessories for your pets or animals.",
+      "src": "assets/images/categories/pet toys.jpg"
+    },
+    {
+      "id": 7,
+      "name": "technology",
+      "description": "This consist of all the technologies old, present, and futuristic.",
+      "src": "assets/images/categories/technology.jpg"
+    },
+    {
+      "id": 8,
+      "name": "groceries",
+      "description": "This consist of all varieties of perishables goods.",
+      "src": "assets/images/categories/grocery.jpg"
+    },
+    {
+      "id": 9,
+      "name": "home & furniture",
+      "description": "This consist of all the home related accessories that you require.",
+      "src": "assets/images/categories/home.jpg"
+    },
+    {
+      "id": 10,
+      "name": "cosmetics",
+      "description": "This consist of all health and beauty related categoriess.",
+      "src": "assets/images/categories/cosmetics.jpg"
+    },
+    {
+      "id": 11,
+      "name": "automobile parts",
+      "description": "This consist of all the parts required for your vehicles.",
+      "src": "assets/images/categories/automobile.jpg"
+    },
+    {
+      "id": 12,
+      "name": "gym accessories",
+      "description": "This consist of all foot gym related accessories.",
+      "src": "assets/images/categories/gym.jpg"
+    },
+    {
+      "id": 13,
+      "name": "cannabis",
+      "description": "This consist of all your medicinal herbs, cannabis related.",
+      "src": "assets/images/categories/cannabis.jpg"
+    },
+    {
+      "id": 14,
+      "name": "health",
+      "description": "This consist of all health related categoriess, both home and organisational settings.",
+      "src": "assets/images/categories/health.jpg"
+    }
+  ]
+}
