@@ -10,6 +10,10 @@
   },
   "author": "trex",
   "license": "ISC",
+"repository": {
+  "type": "git",
+  "url": "https://github.com/trextozyne/healthbestcare-node.git"
+},
   "dependencies": {
     "@google-cloud/debug-agent": "^5.1.2",
     "@google-cloud/error-reporting": "^2.0.0",
